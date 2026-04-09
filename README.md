@@ -15,6 +15,15 @@ A comprehensive MERN stack application for managing library inventory, book tran
   - Dynamic status tracking (Available/Borrowed).
 - **Transaction History**: Track which books are borrowed by which users and when they are due.
 
+## 🧪 Test Credentials
+
+For testing purposes, you can use the following accounts:
+
+| Role | Email | Password |
+| :--- | :--- | :--- |
+| **Admin** | `admin@test.com` | `password123` |
+| **User** | `student@test.com` | `password123` |
+
 ## 🛠️ Tech Stack
 
 - **Frontend**: React.js (Vite), Axios, React Router, Vanilla CSS.
