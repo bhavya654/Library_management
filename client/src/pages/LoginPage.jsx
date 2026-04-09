@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import api from '../api/api';
 import { AuthContext } from '../context/AuthContext';
 import Message from '../components/Message';
@@ -65,6 +65,10 @@ const LoginPage = () => {
             {loading ? 'Logging in...' : 'Login'}
           </button>
         </form>
+        
+        <div style={{ marginTop: '20px', textAlign: 'center', fontSize: '14px' }}>
+          Don't have an account? <Link to="/register" style={{ color: 'var(--primary)', fontWeight: 'bold' }}>Register</Link>
+        </div>
       </div>
     </div>
   );

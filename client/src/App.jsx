@@ -6,13 +6,14 @@ import LoginPage from './pages/LoginPage';
 import Dashboard from './pages/Dashboard';
 import MyBooks from './pages/MyBooks';
 import AdminDashboard from './pages/AdminDashboard';
+import RegisterPage from './pages/RegisterPage';
 import './index.css';
 
 const ProtectedRoute = ({ children, isAdmin }) => {
   const { user, loading } = useContext(AuthContext);
 
   if (loading) return <div>Loading...</div>;
-  if (!user) return <Navigate to="/login" />;
+  if (!user) return <Navigate to="/register" />;
   if (isAdmin && user.role !== 'admin') return <Navigate to="/" />;
 
   return children;
@@ -24,6 +25,7 @@ const AppContent = () => {
       <Navbar />
       <Routes>
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
         <Route 
           path="/" 
           element={
